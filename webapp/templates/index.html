@@ -1,12 +1,18 @@
 {% extends 'bootstrap/base.html' %}
 
 {% block title %}Home Page{% endblock %}
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="style.css">
+{% endblock %}
 
 {% block content %}
+<div class="container">
     <div class="buttons">
         <ul class="list-unstyled">
             <li><a href="#">My profile</a></li>
+            <a href="{{ url_for('settings') }}" class="btn btn-primary btn-lg" role="button">Setting</a>
         </ul>
-        <button type="button" class="btn btn-primary btn-lg">Setting</button>
     </div>
+</div>
 {% endblock %}
